@@ -1,0 +1,10 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #18c944;
+    color: #fff;
+    padding-bottom: 1rem;
+    text-align: center;
+    overflow: hidden;
+    padding-inline: 2.0rem;
+}

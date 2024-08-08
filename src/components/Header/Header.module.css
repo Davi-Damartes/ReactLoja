@@ -1,0 +1,31 @@
+.header{
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #f44336;
+    position: fixed;
+    top: 0;
+    height: 68px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 9999;
+}
+
+.header span{
+    font-size: 2rem;
+    color: black;
+    font-weight: 500;
+}
+
+.header a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.125rem;/* 18px = 1.125rem; */
+    padding-inline: 0.5rem; 
+}
+
+.header .contador{
+    font-size: 2rem;
+}
+
+
