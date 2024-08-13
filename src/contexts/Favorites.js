@@ -6,7 +6,7 @@ FavoritesContext.displayName = "MyFavorites"
 export default function FavoritesProvider({ children } ) {
     const [ favorite, setFavorite ] = useState([])
     return (
-            <FavoritesContext.Provider value={{favorite,  setFavorite}} >
+            <FavoritesContext.Provider value={{ favorite,  setFavorite }} >
                 { children }
             </FavoritesContext.Provider>
     );
@@ -19,7 +19,7 @@ export function UseFavoriteContext(){
     function addFavorite(newFavorite){
 
         // Verificar duplicidade
-        const repeatedFavorite = favorite.some((item) => item.id == newFavorite.id)
+        const repeatedFavorite = favorite.some((item) => item.id === newFavorite.id)
         
         // Nova lista recebe valores lista anterior
         let newList = [...favorite]
