@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Banner from "../../components/Banner/Index";
 import Card from "../../components/Card/Index";
 import Category, {categories, filterCategory} from "../../components/Category/Index";

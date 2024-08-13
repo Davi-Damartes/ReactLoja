@@ -16,9 +16,10 @@ function Header(){
                 <nav>  
                     <Link to="/">Home</Link>       
                     <Link to="/search">Search</Link>
-                    <Link to="/favorites">
-                            Favoritos <span className={styles.contador}>{contador}</span>
+                    <Link to="/favorites">Favoritos 
+                        <span className={styles.contador}>{contador}</span>
                     </Link> 
+                    <Link to="/Cadastre">Cadastrar Vídeo</Link> 
                 </nav>
             </header>
         </>
