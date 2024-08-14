@@ -5,13 +5,15 @@ import Container from "../../components/Container/Index";
 import Footer from "../../components/Footer/Index";
 import Header from "../../components/Header/Index";
 import Carousel from "../../components/Carousel/Index";
+import ScrollToTopButton from "../../components/ScrollToTopButton/index";
 
 
 function Home() {
   return (
     <>
+      <ScrollToTopButton />
       <Header /> 
-      <Banner imagem={"NikeAirMaxBranco"} />      
+      <Banner imagem={"NikeAirMaxVerde"} />      
       <Container>  
           { categories.map((category, index) => 
               <Category CategoryName={category} key={index}>
