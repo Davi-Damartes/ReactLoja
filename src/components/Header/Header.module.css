@@ -28,4 +28,22 @@
     font-size: 2rem;
 }
 
+/* extra 01 responsividade */
+@media (max-width: 560px) {
+    .header span {
+        font-size: 1.5rem;
+    }
+    .header a {
+        font-size: 0.95rem;
+        padding-inline: 0.5rem;
+    }
+}
 
+@media (max-width: 455px) {
+    .header span {
+        font-size: 1.0rem;
+    }
+    .header a {
+        font-size: 0.95rem;
+    }
+}
