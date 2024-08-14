@@ -10,11 +10,25 @@ function Form(){
     const [ videos, setVideos] = useState([])
     const [ erros, setErros] = useState('')
 
+
+    function validarUrl(url) {
+        const regex = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([a-zA-Z0-9\-_]+)$/
+    
+        if(!regex.test(url) || url.length < 43) {
+            setErros('ERRO: URL inválida!')
+            return false
+        } else {
+            return url.substring(32, 43) // Id do video
+        }
+    }
+
+
     function OnSave(e){
         e.preventDefault() 
         console.log(url, category)
 
-        // Validar url e category
+        
+        // Validar category
         if(!category || category === '-'){
             setErros("ERRO: Escolha uma categoria!")
             return
@@ -24,22 +38,28 @@ function Form(){
         }
 
 
-        // Adicionar a Url e categoria
-        const newVideo= {url, category}
-        setVideos([...videos, newVideo])
+        // Validar URL 
+        const urlVideo = validarUrl(url)
 
-        localStorage.setItem("videos", JSON.stringify([...videos, newVideo] ))
+        if(urlVideo && category){
+            // salvar dados           
+            const newVideo= {url, category}
+            setVideos([...videos, newVideo])
 
-        // Limpar o Form
-        setUrl('')
-        setCategory('')
-        // https://www.youtube.com/watch?v=
+            localStorage.setItem("videos", JSON.stringify([...videos, newVideo] ))
+
+            setUrl('')
+            setCategory('')
+        } else{
+            setErros('ERRO: Url Inválida')
+        }
+
     }
 
 
     return(
         <section className={styles.container}>
-            <h2>Cadastro de vídeo</h2>
+            <h2>Cadastro de Vídeos</h2>
             <form onSubmit={OnSave}>
                 <div>
                     <label>URL do Vídeo</label>
@@ -49,7 +69,7 @@ function Form(){
                            value={url}
                            maxLength="43"
                            minLength="43"
-                           onChange={event => setUrl(event.target.value )}
+                           onChange={event => setUrl(event.target.value)}
                     />
                 </div>
                 <div>
@@ -65,7 +85,8 @@ function Form(){
                 <div>
                     <button>Cadastrar</button>
                 </div>
-                <div className={styles.erros}>
+                <div className={styles.erros}
+                    style={{ backgroundColor: erros ? '#f44336' : 'transparent' }}>
                     { erros }
                 </div>
             </form>

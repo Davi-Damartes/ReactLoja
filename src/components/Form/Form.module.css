@@ -55,7 +55,17 @@
     background-color: #f44336;
 }
 
-.container div.erros::after {
+.container div.erros{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    background-color: #f44336;
+    border-radius: 20px;
+    padding: 18px 32px;
+}
+
+.container div.erros{
     display: flex;
     justify-content: center;
     width: 100%;
