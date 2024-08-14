@@ -1,12 +1,16 @@
 .tenis{
     padding-top: 75px;
-
+}
+/* responsividade capa vídeo*/
+@media (max-width: 1024px) {
+    iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
 }
 
-.container{
-    height: 100%;
-}
 
-.container h2{
-    color: aliceblue;
+.h2{
+    color: rgb(28, 92, 148);
+    
 }
