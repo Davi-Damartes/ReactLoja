@@ -43,7 +43,7 @@ function Form(){
 
         if(urlVideo && category){
             // salvar dados           
-            const newVideo= {url, category}
+            const newVideo = {url, category}
             setVideos([...videos, newVideo])
 
             localStorage.setItem("videos", JSON.stringify([...videos, newVideo] ))
