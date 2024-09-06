@@ -12,3 +12,5 @@ teste
 ==============
 
 teste conflito
+
+teste conflito2
