@@ -10,3 +10,5 @@ add linha2
 terceira parte 
 teste
 ==============
+
+modificando para conflito
