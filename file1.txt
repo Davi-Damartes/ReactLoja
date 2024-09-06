@@ -13,4 +13,7 @@ teste
 
 teste conflito
 
-teste conflito 3
+<<<<<<< HEAD
+
+teste conflito2
+>>>>>>> nova-branch
