@@ -11,4 +11,4 @@ terceira parte
 teste
 ==============
 
-modificando para conflito
+teste conflito
