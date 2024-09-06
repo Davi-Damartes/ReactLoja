@@ -17,3 +17,6 @@ teste conflito
 
 teste conflito2
 >>>>>>> nova-branch
+
+
+git clone
